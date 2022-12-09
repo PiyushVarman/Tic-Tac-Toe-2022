@@ -34,7 +34,7 @@ while True:
     play=[]
     comp=[]
     while len(l)!=0 and st!=0:
-        while stat1!=1:
+        while stat1!=1 and len(l)!=0:
                 matprint()
                 a=int(input("\nPlayer 1, enter the index number here:"))
                 if a in l:
@@ -86,7 +86,7 @@ while True:
                 else:
                     print("\nSorry, invalid number, Player 1! Try again!")
 
-        while stat2!=1:
+        while stat2!=1 and len(l)!=0:
                 matprint()
                 cpu=int(input("\nPlayer 2, enter the index number here:"))
                 if cpu in l:
@@ -135,16 +135,18 @@ while True:
                         print("Player 2 wins!")
                         st=0
                         exit()
-                    elif len(l)==0:
-                        print("What a closely contested game! It ends in a tie!")
-                        st=0
-                        exit()
+                    
 
                 else:
                     print("\nSorry, invalid number, Player 2! Try again!")
+            
+        if len(l)==0:
+            print("What a closely contested game! It ends in a tie!")
+            st=0
+            exit()
+            break
         
 
             
                 
            
-
