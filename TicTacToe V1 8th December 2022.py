@@ -72,16 +72,15 @@ while True:
 
             if len(l)!=0:
                 cpu=random.choice(l)
-
-            comp.append(cpu)
-            for i in range(3):
-                for j in range(3):
-                    if matrix[i][j]==cpu:
-                        print("\nThe CPU has moved to position ",cpu,"!",sep='')
-                        bmatrix[i][j]='O'
-                        l.remove(cpu)
-                        matterprint()
-                        print()
+                comp.append(cpu)
+                for i in range(3):
+                    for j in range(3):
+                        if matrix[i][j]==cpu:
+                            print("\nThe CPU has moved to position ",cpu,"!",sep='')
+                            bmatrix[i][j]='O'
+                            l.remove(cpu)
+                            matterprint()
+                            print()
 
             if 1 in comp and 2 in comp and 3 in comp:
                 print("Oh no! The computer wins!")
