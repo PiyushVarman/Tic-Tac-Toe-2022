@@ -1,5 +1,7 @@
 import random
 k=1
+p1=input("Enter your name, Player 1!")
+p2=input("Enter your name, p2!")
 matrix,bmatrix=[],[]
 for i in range(3):
     n=[]
@@ -34,15 +36,15 @@ while True:
     play=[]
     comp=[]
     while len(l)!=0 and st!=0:
-        while stat1!=1 and len(l)!=0:
+        while stat1!=1:
                 matprint()
-                a=int(input("\nPlayer 1, enter the index number here:"))
+                a=int(input(p1+", enter the index number here:"))
                 if a in l:
                     play.append(a)
                     for i in range(3):
                         for j in range(3):
                             if matrix[i][j]==a:
-                                print("\nPlayer 1 has moved to position ",a,"!",sep='')
+                                print(p1," has moved to position ",a,"!",sep='')
                                 bmatrix[i][j]='X'
                                 l.remove(a)
                                 matterprint()
@@ -52,49 +54,49 @@ while True:
                     
                     
                         if 1 in play and 2 in play and 3 in play:
-                            print("Player 1 wins!")
+                            print(p1,"wins!")
                             st=0
                             exit()
                         elif 1 in play and 4 in play and 7 in play:
-                            print("Player 1 wins!")
+                            print(p1,"wins!")
                             st=0
                             exit()
                         elif 7 in play and 8 in play and 9 in play:
-                            print("Player 1 wins!")
+                            print(p1,"wins!")
                             st=0
                             exit()
                         elif 3 in play and 6 in play and 9 in play:
-                            print("Player 1 wins!")
+                            print(p1,"wins!")
                             st=0
                             exit()
                         elif 4 in play and 5 in play and 6 in play:
-                            print("Player 1 wins!")
+                            print(p1,"wins!")
                             st=0
                             exit()
                         elif 2 in play and 5 in play and 8 in play:
-                            print("Player 1 wins!")
+                            print(p1,"wins!")
                             st=0
                             exit()
                         elif 1 in play and 5 in play and 9 in play:
-                            print("Player 1 wins!")
+                            print(p1,"wins!")
                             st=0
                             exit()
                         elif 3 in play and 5 in play and 7 in play:
-                            print("Player 1 wins!")
+                            print(p1,"wins!")
                             st=0
                             exit()
                 else:
-                    print("\nSorry, invalid number, Player 1! Try again!")
+                    print("\nSorry, invalid number, ",p1,"! Try again!",sep='')
 
-        while stat2!=1 and len(l)!=0:
+        while stat2!=1:
                 matprint()
-                cpu=int(input("\nPlayer 2, enter the index number here:"))
+                cpu=int(input(p2+", enter the index number here:"))
                 if cpu in l:
                     comp.append(cpu)
                     for i in range(3):
                         for j in range(3):
                             if matrix[i][j]==cpu:
-                                print("\nPlayer 2 has moved to position ",cpu,"!",sep='')
+                                print(p2," has moved to position ",cpu,"!",sep='')
                                 bmatrix[i][j]='O'
                                 l.remove(cpu)
                                 matterprint()
@@ -104,49 +106,41 @@ while True:
                                 
 
                     if 1 in comp and 2 in comp and 3 in comp:
-                        print("Player 2 wins!")
+                        print(p2,"wins!")
                         st=0
                         exit()
                     elif 1 in comp and 4 in comp and 7 in comp:
-                        print("Player 2 wins!")
+                        print(p2,"wins!")
                         st=0
                         exit()
                     elif 7 in comp and 8 in comp and 9 in comp:
-                        print("Player 2 wins!")
+                        print(p2,"wins!")
                         st=0
                         exit()
                     elif 3 in comp and 6 in comp and 9 in comp:
-                        print("Player 2 wins!")
+                        print(p2,"wins!")
                         st=0
                         exit()
                     elif 4 in comp and 5 in comp and 6 in comp:
-                        print("Player 2 wins!")
+                        print(p2,"wins!")
                         st=0
                         exit()
                     elif 2 in comp and 5 in comp and 8 in comp:
-                        print("Player 2 wins!")
+                        print(p2,"wins!")
                         st=0
                         exit()
                     elif 1 in comp and 5 in comp and 9 in comp:
-                        print("Player 2 wins!")
+                        print(p2,"wins!")
                         st=0
                         exit()
                     elif 3 in comp and 5 in comp and 7 in comp:
-                        print("Player 2 wins!")
+                        print(p2,"wins!")
                         st=0
                         exit()
-                    
+                    elif len(l)==0:
+                        print("What a closely contested game! It ends in a tie!")
+                        st=0
+                        exit()
 
                 else:
-                    print("\nSorry, invalid number, Player 2! Try again!")
-            
-        if len(l)==0:
-            print("What a closely contested game! It ends in a tie!")
-            st=0
-            exit()
-            break
-        
-
-            
-                
-           
+                    print("\nSorry, invalid number, ",p2,"! Try again!",sep='')
