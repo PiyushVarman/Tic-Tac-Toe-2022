@@ -36,7 +36,7 @@ while len(l):
     comp=[]
     while len(l)!=0:
         attack,defense=0,0
-        def kyodaimax():
+        def kyodaimax(): #DEKAKU IKOZE!! (Start of AI)
             global attack
             global defense
             global m
