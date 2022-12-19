@@ -2,6 +2,7 @@ import random
 k=1
 p1=input("Enter your name, Player 1!")
 p2=input("Enter your name, Player 2!")
+print("\nEnter symbols of your own choice! Ensure they are just one character long.")
 sp1=input("\nWhat symbol would you like to use "+str(p1)+"?")
 sp2=input("What symbol would you like to use "+str(p2)+"?")
 matrix,bmatrix=[],[]
