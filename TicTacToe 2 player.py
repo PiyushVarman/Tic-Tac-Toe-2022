@@ -1,7 +1,9 @@
 import random
 k=1
 p1=input("Enter your name, Player 1!")
-p2=input("Enter your name, p2!")
+p2=input("Enter your name, Player 2!")
+sp1=input("\nWhat symbol would you like to use "+str(p1)+"?")
+sp2=input("What symbol would you like to use "+str(p2)+"?")
 matrix,bmatrix=[],[]
 for i in range(3):
     n=[]
@@ -45,7 +47,7 @@ while True:
                         for j in range(3):
                             if matrix[i][j]==a:
                                 print(p1," has moved to position ",a,"!",sep='')
-                                bmatrix[i][j]='X'
+                                bmatrix[i][j]=sp1
                                 l.remove(a)
                                 matterprint()
                                 print()
@@ -97,7 +99,7 @@ while True:
                         for j in range(3):
                             if matrix[i][j]==cpu:
                                 print(p2," has moved to position ",cpu,"!",sep='')
-                                bmatrix[i][j]='O'
+                                bmatrix[i][j]=sp2
                                 l.remove(cpu)
                                 matterprint()
                                 print()
