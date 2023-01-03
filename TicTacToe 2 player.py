@@ -1,4 +1,3 @@
-import random
 k=1
 p1=input("Enter your name, Player 1!")
 p2=input("Enter your name, Player 2!")
